@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      height: 200vh;
+      margin: 0;
+      padding: 0;}
+
+    #CONTAINER{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 1300px;
+      height: 150px;
+    }
+
+    .Container0 {
+      background-color: rgb(103, 225, 250);
+      padding: 20px;
+      height: 700px;
+      width: 1000px;
+    }
+
+    #circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: rgb(245, 224, 62);
+      position: absolute;
+    }
+
+    .Container1{
+      border-radius: 5px;
+      text-align: center;
+      width:900px;
+      heigth:750px;
+      text-transform: uppercase;
+      font-style: bold;
+      background-color: rgb(238, 110, 178);
+      padding: 20px;
+    }
+
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <title>FINAL EXCERCISE-JQUERY</title>
+</head>
+<body>
+  
+  <div class="Container0">
+    <h1>JOHANSEN N. DELOS REYES</h1>
+    <h1 class="U">BSCPE-2-GE </h1>
+    <div id="circle" class="special"></div>
+  </div >
+
+ <h2 class="U">REPLACE_ME</h2>
+ 
+<div id="CONTAINER">
+  <div class="Container1 ">
+    <h3 class="special">My Favorite Color</h3>
+    <p>- White</p>
+    <p class="ignore">- Black</p>
+    <p>- Pink</p>
+    <p class="ignore">- Brown</p>
+    <p>- Yellow</p>
+    <p class="ignore">- Violet</p>
+    <p>- Green</p>
+    <p class="ignore">- Gray</p>
+  <HR>
+  <BR>
+    <h1 class="special">Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+  <HR>
+  <BR>
+    <h3 class="special">My Classmates</h3>
+    <ul id="my-list">
+      <li class="list-item">1. Favorite 1 - Trixie Mae Abulencia</li>
+      <li class="">2. Favorite 2 - Ivy Rose Castillo</li>
+      <li class="list-item">3. Favorite 3  - Amiel Andrei Reyes</li>
+      <li class="">4. Favorite 4 -Irha Puyat</li>
+      <li class="list-item">5. Favorite 5 - Trixie Mae Abulencia</li>
+    </ul>
+  </div>
+</div>
+  <script>
+
+  var P_Ignore = $(".Container1 > p:not(:has(*)):not(.ignore)");
+P_Ignore.css("color", "blue");
+
+var Replace_Elements = $(':contains("REPLACE_ME")');
+Replace_Elements.css("color", "red");
+
+var DIV_Special = $('div:has(.special)');
+DIV_Special.css("font-style", "bold");
+
+var Headings = $('h1, h2, h3, h4, h5, h6');
+Headings.css({"color":"BLACK"});
+
+var Li_Visible_O = $('li:visible:odd');
+Li_Visible_O.css("color", "BLUE","font-style", "italic");
+
+function changePosition() {
+  var top = Math.random() * ($(window).height() - $('#circle').height());
+  var left = Math.random() * ($(window).width() - $('#circle').width());
+  $('#circle').css({
+    top: top,
+    left: left
+  });
+}
+$(document).ready(function() {
+ 
+  setInterval(changePosition, 1000);
+});
+       
+
+  </script>
+</body>
+</html>

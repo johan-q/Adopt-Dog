@@ -1,0 +1,286 @@
+<!DOCUMENT HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ADOPT NOW</title>
+        <link rel="stylesheet" href="tripstyle (1).css">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    
+    </head>
+    <body>
+        <header class="header">
+            
+        
+            <nav class="navbar">
+                <div id="nav-close" class="fas fa-times"></div>
+                <a href="home page.html">HOME</a>
+                <a href="Magazine.html">GALLERY</a>
+               
+                <a href="#plan your trip">ADOPT</a>
+                <a href="index.html">DISCOVER</a>
+            </nav>
+        
+            <div class="icons">
+                <div id="menu-btn" class="fas fa-bars"></div>
+            </div>
+        </header>
+
+        <div class="banner">
+            <center>
+                <!--<img class="pic" src="header07.png">-->
+                <header>Adopt now!</header>
+            </center>
+
+            <div class="progress-bar">
+                <ul>
+                    <li>
+                        <i class="icon uil uil-chat-bubble-user"></i>
+                        <div class="progress one">
+                            <p>1</p>
+                            <i class="uil uil-check"></i>
+                        </div>
+                        <p class="text">Information</p>
+                    </li>
+                    <li>
+                        <i class="icon uil uil-list-ol"></i>
+                        <div class="progress two">
+                            <p>2</p>
+                            <i class="uil uil-check"></i>
+                        </div>
+                        <p class="text">Income</p>
+                    </li>
+                    <li>
+                        <i class="icon uil uil-map"></i>
+                        <div class="progress three">
+                            <p>3</p>
+                            <i class="uil uil-check"></i>
+                        </div>
+                        <p class="text">Place</p>
+                    </li>
+                    <li>
+                        <i class="icon uil uil-calendar-alt"></i>
+                        <div class="progress four">
+                            <p>4</p>
+                            <i class="uil uil-check"></i>
+                        </div>
+                        <p class="text">Date</p>
+                    </li>
+                    <li>
+                        <i class="icon uil uil-kayak"></i>
+                        <div class="progress five">
+                            <p>5</p>
+                            <i class="uil uil-check"></i>
+                        </div>
+                        <p class="text">Dog</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="content">
+            <div class="container">
+                <div class="form-frame">
+                    <form action="insert.php" method="POST">
+                        <div class="form first page-slide">
+                            <!--Personal Information-->
+                            <div class="personal information">
+                                <span class="title"><center>PERSONAL INFORMATION</center></span>
+
+                                <div class="fields">
+                                    <div class="input-field">
+                                        <label>Full Name</label>
+                                        <input type="text" placeholder="Enter name" name="full_name" required>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label>Email</label>
+                                        <input type="text" placeholder="Enter email" name="email" required>
+                                    </div>
+                                    
+                                    <div class="input-field">
+                                        <label>Phone Number</label>
+                                        <input type="number" placeholder="Enter phone number" name="phone_number" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="nextBtn0 next">
+                                <span class="btnText">Next</span>
+                            </button>
+                        </div>
+
+                        <div class="form second">
+                            <!--Number of People-->
+                            <div class="people number">
+                                <span class="title"><center>INCOME</center></span>
+                            
+                                <div class="fields">
+                                    <div class="input-field">
+                                        <label>PER YEAR</label>
+                                        <input type="number" placeholder="Enter the income" name="adults" required>
+                                    </div>
+
+
+                                    <div class="input-field">
+                                        <label>Number of dogs in house</label>
+                                        <input type="number" placeholder="Enter number of dogs in house" name="teens" required>
+                                    </div>
+
+                                    <div class="input-field">
+                                        <label>How many times would you like to adopt</label>
+                                        <input type="number" placeholder="Enter number of dogs to adopt" name="children" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="buttons">
+                                <button class="nextBtn1 next">
+                                    <span class="btnText">Next</span>
+                                </button>
+
+                                <button class="backBtn1 back">
+                                    <span class="btnText">Back</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form third">
+                            <!--Place-->
+                            <div class="place">
+                                <span class="title"><center>PLACE</center></span>
+                            
+                                <div class="fields">
+                                    <div class="input-field">
+                                        <label>Place</label>
+                                        <select name="place" required>
+                                            <option selected hidden value="">Select place</option>
+                                            <option>Luzon</option>
+                                            <option> Visayas</option>
+                                            <option>Mindanao</option>
+                                            
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="buttons">
+                                <button class="nextBtn2 next">
+                                    <span class="btnText">Next</span>
+                                </button>
+
+                                <button class="backBtn2 back">
+                                    <span class="btnText">Back</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form fourth">
+                            <!--Date of Booking-->
+                            <div class="booking date">
+                                <span class="title"><center>DATES</center></span>
+                                <div class="fields">
+                                    
+                                    <div class="input-field">
+                                        <label>Date of adoption you want </label>
+                                        <input type="date" name="arrival_date" required>
+                                    </div>
+
+                                    
+
+                                </div>
+                            </div>
+
+                            <div class="buttons">
+                                <button class="nextBtn3 next">
+                                    <span class="btnText">Next</span>
+                                </button>
+                                
+                                <button class="backBtn3 back">
+                                    <span class="btnText">Back</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form fifth">
+                            <!--Activities-->
+                            <div class="activities">
+                                <span class="title"><center>GENDER</center></span>
+                                <div class="fields">
+                                    <div class="input-field">
+                                        <label>GENDER</label>
+                                        <select name="activities" required>
+                                            <option selected hidden value="">What's your Gender</option>
+                                            <option>Female</option>
+                                            <option>Male</option>
+                                           
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+                            
+                            <div class="buttons">
+                                <button class="submit">
+                                    <span class="btnText">SUBMIT</span>
+                                </button>
+
+                                <button class="backBtn4 back">
+                                    <span class="btnText">Back</span>
+                                </button>
+                            </div>   
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <section class="footer">
+
+            <div class="box-container">
+        
+                <div class="box">
+                    <h3>Quick Links</h3>
+                    <a href="home page.html">Home</a>
+                    <a href="Magazine.html">Gallery</a>
+                    
+                    <a href="tripPlan.html">Book</a>
+                    <a href="index.html">Discover</a>
+                </div>
+        
+                <div class="box">
+                    <h3>Axtra Links</h3>
+                    <a href="#">Ask Questions</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+        
+                <div class="box">
+                    <h3>Contact Info</h3>
+                    <a href="https://telegram.org/"> <i class="fas fa-phone"></i> +903-456-7890 </a>
+                    <a href="https://telegram.org/"> <i class="fas fa-phone"></i> +941-222-3333 </a>
+                    <a href="https://mail.google.com/mail/u/0/"> <i class="fas fa-envelope"></i>jndelosreyes@gmail.com </a>
+                    <a href="https://www.google.com/maps/place/Quezon/@14.1854131,120.6952247,8z/data=!3m1!4b1!4m6!3m5!1s0x33a29fe64d8d385b:0x8176ee8cf399b41f!8m2!3d13.9346903!4d121.947311!16zL20vMDFqc3k1"> <i class="fas fa-map"></i> Quezon  Province</a>
+                </div>
+        
+                <div class="box">
+                    <h3>Follow Us</h3>
+                    <a href="https://www.facebook.com/your.Yohan028/"> <i class="fab fa-facebook-f"></i> Facebook </a>
+                    <a href="https://twitter.com/home"> <i class="fab fa-twitter"></i> Twitter </a>
+                    <a href="https://www.instagram.com/"> <i class="fab fa-instagram"></i> Instagram </a>
+                </div>
+        
+            </section>
+        
+        </div>
+
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <script src="tripscript.js"></script>
+        
+    </body>
+</html>

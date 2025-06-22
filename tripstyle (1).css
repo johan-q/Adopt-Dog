@@ -1,0 +1,797 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Century Gothic;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+  
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: #046c77;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #131619;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    border: 0.2rem solid #10221b;
+    color: #9dbbe4;
+    cursor: pointer;
+    background: none;
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+}
+
+.btn:hover {
+    background: #abf2ff;
+    color: #668cde;
+}
+
+.heading {
+    font-weight: Bolder;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 4rem;
+    color: #f989aa;
+}
+  
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 9%;
+    z-index: 1000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+  
+.header.active {
+    background: #093849;
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+  
+.header .logo {
+    margin-right: auto;
+    width: 150px;
+    height: 50px;
+}
+
+.header .navbar a {
+    margin-left: 2rem;
+    font-size: 1.7rem;
+    color: #eff5fa;
+}
+  
+.header .navbar a:hover {
+    color: #fff;
+}
+  
+.header .navbar #nav-close {
+    font-size: 5rem;
+    cursor: pointer;
+    color: #720f2d;
+    display: none;
+}
+  
+.header .icons a,
+.header .icons div {
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    cursor: pointer;
+    color: #720f2d;
+}
+  
+.header #menu-btn {
+    display: none;
+}
+
+body{
+    min-height: 100vh;
+    background-color: #f4e98c;
+    transition: all 0.3s ease;
+}
+
+.banner{
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    align-items: center;
+}
+
+.banner header{
+    letter-spacing: 9px;
+    font-weight: bolder;
+    font-size: 120px;
+    margin-bottom: 40px;
+    color: #720f2d;
+}
+
+.progress-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+ul{
+    display: flex;
+    margin-top: 30px;
+}
+
+ul li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul li .icon{
+    font-size: 35px;
+    color: #720f2d;
+    margin: 0 60px;
+}
+
+ul li .text{
+    font-size: 14px;
+    font-weight: 600;
+    color: #720f2d;
+}
+
+ul li .progress{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: black;
+    margin: 14px 0;
+    display: grid;
+    place-items: center;
+    color: #668cde;
+    position: relative;
+    cursor: pointer;
+}
+
+.progress::after{
+    content: " ";
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    background-color: black;
+    right: 43px;
+}
+
+.one::after{
+    width: 0;
+    height: 0;
+}
+
+ul li .progress .uil{
+    display: none;
+}
+
+ul li .progress p{
+    font-size: 13px;
+}
+
+ul li .active{
+    background-color: #720f2d;
+    display: grid;
+    place-items: center;
+}
+
+li .active::after{
+    background-color: #720f2d;
+}
+
+ul li .active p{
+    display: none;
+}
+
+ul li .active .uil{
+    font-size: 20px;
+    display: flex;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 920px;
+    border-radius: 8px;
+    padding: 60px 55px 60px 55px;
+    margin: 620px 0px 150px 0px;
+    background-color: #fff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 50);
+}
+
+.container .form-frame{
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-frame form{
+    display: flex;
+    width: 400%;
+}
+
+.form-frame form .form{
+    width: 25%;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.form-frame form .form .title{
+    font-size: 23px;
+    font-weight: bold;
+    color: #720f2d;
+}
+
+.form-frame form .form .fields{
+    position: relative;
+    display: flex;
+    width: 809px;
+    margin: 1px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.form-frame form .form .fields .input-field{
+    display: flex;
+    margin: 5px 0px;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+.input-field label{
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 15px;
+    color: rgb(0, 0, 0);
+}
+
+.input-field input{
+    font-size: 16px;
+    font-weight: 400;
+    margin: 5px 0;
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    outline: none;
+    color: #333;
+    padding: 0 10px;
+}
+
+.input-field input:is(:focus, :valid){
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.10);
+}
+
+.input-field input[type="date"]{
+    color: gray;
+}
+
+.input-field input[type="date"]:valid{
+    color: #333;
+}
+
+.input-field select{
+    font-size: 16px;
+    font-weight: 400;
+    margin: 5px 0;
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    outline: none;
+    color: #333;
+    padding: 0 10px;
+}
+
+.container form button{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 143px;
+    width: 70%;
+    border: none;
+    outline: none;
+    color: #668cde;
+    border-radius: 5px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    background-color: #720f2d;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    float: right;
+}
+
+form button:hover{
+    color: #0c749d;
+    background-color: #cdd2df;
+}
+
+form .buttons{
+    position: relative;
+    align-items: center;
+}
+
+form .buttons .back{
+    margin-right: 523px;
+}
+
+form button .btnText{
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.footer {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../images/footer-bg.jpg) no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(bg5.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+    padding: 75px 120px;
+}
+
+.footer .box-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+  
+.footer .box-container .box h3 {
+    font-size: 2rem;
+    padding: 1.5rem 0;
+    color: #b3ece8;
+}
+  
+.footer .box-container .box a {
+    display: block;
+    font-size: 1.4rem;
+    color: #fff;
+    padding: 1rem 0;
+}
+  
+.footer .box-container .box a i {
+    color: #ffdf01;
+    padding-right: .5rem;
+}
+  
+.footer .box-container .box a:hover {
+    color: #ffdf01;
+}
+
+.footer .box-container .box a:hover i {
+    padding-right: 2rem;
+}
+
+@media (max-width: 980px) {
+    .header {
+        padding: 2rem;
+    }
+    
+    section {
+        padding: 3rem 2rem;
+    }
+
+    .banner header{
+        letter-spacing: 5px;
+        font-weight: bolder;
+        font-size: 70px;
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .progress-bar{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    ul li .progress{
+        width: 23px;
+        height: 23px;
+    }
+
+    .progress::after{
+        position: absolute;
+        width: 85px;
+        height: 4px;
+        bottom: 10px;
+        top: auto;
+        right: 32px;
+        z-index: -1;
+    }
+
+    .one::after{
+        height: 0;
+    } 
+
+    ul li .icon{
+        font-size: 23px;
+        margin: 15px 50px;
+    }
+    
+    ul li .text{
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    ul li .progress p{
+        font-size: 10px;
+    }
+
+    .container{
+        width: 600px;
+        border-radius: 8px;
+        padding: 55px 40px;
+        margin: 500 0px 100px 0px;
+        transition: all 0.3s ease;
+    }
+
+    .container form{
+        overflow-y: scroll;
+        transition: all 0.3s ease;
+    }
+
+    .container form::-webkit-scrollbar{
+        display: none;
+    }
+
+    .form-frame form .form .title{
+        font-size: 18px;
+        font-weight: bold;
+    }
+ 
+    .input-field label{
+        font-size: 12px;
+        font-weight: normal;
+        margin-top: 15px;
+    }
+    
+    .input-field input{
+        font-size: 12px;
+        font-weight: 200;
+        margin: 5px 0;
+        width: 515px;
+        height: 35px;
+        padding: 0 8px;
+    }
+
+    .input-field select{
+        font-size: 12px;
+        font-weight: 200;
+        margin: 5px 0;
+        width: 515px;
+        height: 35px;
+        padding: 0 8px;
+    }
+    
+    .container form button{
+        height: 40px;
+        max-width: 110px;
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 40px;
+        margin-bottom: 8px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        float: right;
+    }
+    
+    form .buttons .back{
+        margin-right: 300px;
+    }
+    
+    form button .btnText{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 760px) {
+    .header #menu-btn {
+        display: inline-block;
+    }
+    
+    .header .navbar {
+        position: fixed;
+        top: 0;
+        left: -110%;
+        background: #fff;
+        z-index: 10000;
+        width: 35rem;
+        height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column;
+                flex-flow: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+      
+    .header .navbar.active {
+        left: 0;
+        -webkit-box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+                box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+    }
+
+    .header .navbar a {
+        margin: 1rem 0;
+        font-size: 3rem;
+    }
+    
+    .header .navbar #nav-close {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+    }
+
+    .banner header{
+        letter-spacing: 6px;
+        font-weight: bolder;
+        font-size: 55px;
+        margin-bottom: 15px;
+        transition: all 0.3s ease;
+    }
+
+    ul li .progress{
+        width: 19px;
+        height: 19px;
+        margin: 0 19px;
+    }
+
+    .progress::after{
+        width: 70px;
+        height: 4px;
+        bottom: 10px;
+        top: auto;
+        right: 26px;
+        z-index: -1;
+    }
+
+    .one::after{
+        height: 0;
+    } 
+    
+    ul li .icon{
+        margin: 15px 0;
+    }
+
+    ul li .icon{
+        font-size: 21px;
+        margin: 0 40px;
+    }
+    
+    ul li .text{
+        font-size: 11px;
+        font-weight: 600;
+    }
+
+    ul li .progress p{
+        font-size: 10px;
+    }
+
+    .container{
+        width: 450px;
+        border-radius: 8px;
+        padding: 50px 32px;
+        margin: 435 0px 100px 0px;
+        transition: all 0.3s ease;
+    }
+
+    .container form{
+        overflow-y: scroll;
+        transition: all 0.3s ease;
+    }
+
+    .container form::-webkit-scrollbar{
+        display: none;
+    }
+
+    .form-frame form .form .title{
+        font-size: 16px;
+        font-weight: bold;
+    }
+ 
+    .input-field label{
+        font-size: 11px;
+        font-weight: normal;
+        margin-top: 15px;
+    }
+    
+    .input-field input{
+        font-size: 11px;
+        font-weight: 200;
+        margin: 5px 0;
+        width: 385px;
+        height: 35px;
+        padding: 0 8px;
+    }
+
+    .input-field select{
+        font-size: 11px;
+        font-weight: 200;
+        margin: 5px 0;
+        width: 385px;
+        height: 35px;
+        padding: 0 8px;
+    }
+    
+    .container form button{
+        height: 32px;
+        max-width: 90px;
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 40px;
+        margin-bottom: 8px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        float: right;
+    }
+    
+    form .buttons .back{
+        margin-right: 205px;
+    }
+    
+    form button .btnText{
+        font-size: 12px;
+    }
+
+    .footer{    
+        padding: 50px 40px;
+    }
+}
+
+@media (max-width: 550px) {
+    .banner header{
+        letter-spacing: 7px;
+        font-weight: bolder;
+        font-size: 40px;
+        margin-bottom: 10px;
+        transition: all 0.3s ease;
+    }
+
+    ul li .progress{
+        width: 20px;
+        height: 20px;
+        margin: 0 18px;
+    }
+
+    ul li .icon{
+        font-size: 20px;
+        margin: 0 60px;
+    }
+    
+    ul li .text{
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+    ul li .progress p{
+        font-size: 9px;
+    }
+
+    .progress::after{
+        width: 25px;
+        height: 3px;
+        bottom: 10px;
+        top: auto;
+        right: 26px;
+        z-index: -1;
+    }
+
+    .one::after{
+        height: 0;
+    }
+
+    ul li .icon{
+        margin: 5px 0;
+    }
+
+    .container{
+        width: 300px;
+        border-radius: 8px;
+        padding: 40px 25px;
+        margin: 380px 0px 100px 0px;
+        transition: all 0.3s ease;
+    }
+
+    .container form{
+        overflow-y: scroll;
+        transition: all 0.3s ease;
+    }
+
+    .container form::-webkit-scrollbar{
+        display: none;
+    }
+
+    .form-frame form .form .title{
+        font-size: 14px;
+        font-weight: bold;
+    }
+ 
+    .input-field label{
+        font-size: 10px;
+        font-weight: normal;
+        margin-top: 15px;
+    }
+    
+    .input-field input{
+        font-size: 10px;
+        font-weight: 200;
+        width: 249px;
+        height: 25px;
+        padding: 0 8px;
+    }
+
+    .input-field select{
+        font-size: 10px;
+        font-weight: 200;
+        width: 249px;
+        height: 25px;
+        padding: 0 8px;
+    }
+    
+    .container form button{
+        height: 25px;
+        max-width: 70px;
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 20px;
+        margin-bottom: 8px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        float: right;
+    }
+    
+    form .buttons .back{
+        margin-right: 108px;
+    }
+    
+    form button .btnText{
+        font-size: 10px;
+    }
+
+    .footer{    
+        padding: 50px 20px;
+    }
+}
