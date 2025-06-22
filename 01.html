@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("p:has(br)").css("color", "red");
+});
+</script>
+</head>
+<body>
+<p><br>paragraph with br tag will be in red font color</br></p>
+<p>while paragraph without will still be in black</p>
+</body>
+</html>
